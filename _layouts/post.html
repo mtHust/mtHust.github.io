@@ -17,18 +17,18 @@
           <div class="article">
             <div class="well">
                 <h1><a href="{{ site.baseurl}}{{ page.url }}">[{{ page.date | date: "%Y-%m-%d" }}] {{ page.title }}</a></h1>
-				<div class="c9">
-				Categories：
-				{% for cg in page.categories %}
-				<a href="/categories.html#-ref">{{ cg }},</a> 
-				{% endfor %}
-				|
-				Tags：
-				{% for cg in page.tags %}
-				<a href="/tags.html#-ref">{{ cg }},</a> 
-				{% endfor %}
-				|
-				Time：{{ page.date | date: "%Y-%m-%d" }}
+				<div class="optgroup">
+					Categories：
+					{% for cg in page.categories %}
+					<a href="/categories.html?category={{ cg }}">{{ cg }} </a> 
+					{% endfor %}
+					|
+					Tags：
+					{% for tg in page.tags %}
+					<a href="/tags.html?tag={{ tg }}">{{ tg }} </a> 
+					{% endfor %}
+					|
+					Time：{{ page.date | date: "%Y-%m-%d" }}
 				</div>
 			{% if site.comments == true and page.comments == true and site.disqus != '' %}
                 <p class="author"><a href="#disqus_thread">Comments</a></p>
