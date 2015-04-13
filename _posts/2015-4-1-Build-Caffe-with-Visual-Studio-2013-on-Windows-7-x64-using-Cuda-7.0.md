@@ -7,6 +7,9 @@ categories: [Caffe]
 comments: true
 ---
 
+* Contents:
+{:toc}
+
 
 Compile Caffe with Visual Studio 2013 on Windows 7 x64, using Cuda 7.0, boost 1.57.0, OpenCV 2.4.11 and OpenBlas 0.2.14.  
 
@@ -15,6 +18,7 @@ After succesfully build, you will get tools like *caffe.exe* and examples  like 
 <!-- more -->
 
 ## Prerequisites
+
 * caffe [source](https://github.com/BVLC/caffe)
 * Visual Studio [v2013]()
 * CUDA library version 7.0 and the latest driver version are recommended, but 6.* is fine too. 5.5, and 5.0 are compatible but considered legacy. [v7.0.28](http://developer.download.nvidia.com/compute/cuda/7_0/Prod/local_installers/cuda_7.0.28_windows.exe)

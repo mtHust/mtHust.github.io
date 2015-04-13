@@ -5,8 +5,8 @@
         <div class="col-md-3 hidden-xs">
             {% include sidebar.html %}
         </div>
-        <div class="col-md-9">
-		   <div class="pagination">
+        <div class="col-md-7">
+		  <div class="pagination">
               {% if page.next %}
                 <a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">Newer Post</a>
               {% endif %}
@@ -33,11 +33,12 @@
 			{% if site.comments == true and page.comments == true and site.disqus != '' %}
                 <p class="author"><a href="#disqus_thread">Comments</a></p>
             {% endif %}
-            <div class="post-content">
-            {{ content }} <br />
-			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
-			This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <br />
-			A permanent link is required as <a href="{{ site.url}}{{ page.url }}">{{ site.url}}{{ page.url }}</a>
+			
+            <div class="post-content bs-docs-container">
+				{{ content }}
+				<br />			
+				<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />
+				A permanent link is required as <a href="{{ site.url}}{{ page.url }}">{{ site.url}}{{ page.url }}</a>
             </div>
             {% if page.comments %}
             <div id="disqus_thread">
@@ -47,6 +48,7 @@
             {% endif %}
             </div>
           </div>
+		  <!-- directory side navigation -->
           <div class="pagination">
               {% if page.next %}
                 <a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">Newer Post</a>
@@ -56,6 +58,14 @@
               {% endif %}
 		  </div>
         </div>
+	    <div class="col-md-2 hidden-xs" role="complementary">
+		  <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+		    <ul id="sideNav" class="nav bs-docs-sidenav">
+			<!-- code will be generated in application.js -->
+		    </ul>
+			<a class="back-to-top" href="#top">Back to top</a>
+		  </nav>
+	    </div> <!-- col-md-3 -->
     </div>
 </div>
 
